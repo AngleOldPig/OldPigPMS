@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" 
+              content="
+                default-src 'self';
+                script-src 'self' 'unsafe-inline';
+                connect-src *
+              " 
+    >
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>oldpigPMS</title>
+  </head>
+  <body>
+    <h1>oldpigPMS试制版</h1>
+    <br/>
+    <div class="error-message"></div>
+
+    <!--输入信息区域-->
+    <section class="add-new-project">
+      <form class="add-new-project-form">
+        项目编号： 
+        <input type="text" class="project-index" placeholder="系统自动生成" size="20"><br/><br/>
+        项目名称： 
+        <input type="text" class="project-name" placeholder="请手动输入字符串" size="20"><br/><br/>
+        项目金额： 
+        <input type="number" class="project-cost" placeholder="请手动输入数字" size="20"><br/><br/>
+        需求部门： 
+        <input type="text" class="project-team" placeholder="请手动输入字符串" size="20"><br/><br/>
+        <!--提交按钮需要以上内容都填写齐全-->
+        <input type="submit" class="submit-button" value="确定" disabled><br/><br/>
+      </form>
+    </section>
+
+    <!--在控制区域添加一个按钮-->
+    <section class="controls">
+      <!--button class="clear-button">清空</button-->
+    </section>
+    <script>
+      // 使用Node的require函数
+      // 将外部JS模块加载到渲染器进程中
+      require('./renderer');
+    </script>
+  </body>
+</html>

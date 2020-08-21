@@ -1,0 +1,16 @@
+{
+  "name": "oldpigPMS",
+  "version": "1.0.0",
+  "description": "20200820",
+  "main": "./app/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "OldPig",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.2.1"
+  }
+}
